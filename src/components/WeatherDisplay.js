@@ -6,6 +6,7 @@ function WeatherDisplay({ weather }) {
   // Conditional styling based on temperature
   const tempStyle = {
     backgroundColor: temperature > 20 ? 'red' : 'blue',
+    color: 'red',
   };
 
   return (
