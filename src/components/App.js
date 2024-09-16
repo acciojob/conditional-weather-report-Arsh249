@@ -3,16 +3,15 @@ import WeatherDisplay from './WeatherDisplay';
 import './../styles/App.css';
 
 function App() {
-  const [weather, setWeather] = useState({ temperature: 0, conditions: '' });
+  const [weather, setWeather] = useState({ temperature: 0, conditions: "" });
 
   useEffect(() => {
-    // Simulate fetching weather data
-    const weatherInput = { temperature: 25, conditions: "Sunny" };
-    setWeather(weatherInput);
+    // Update weather state with the given input
+    setWeather({ temperature: 25, conditions: "Sunny" });
   }, []);
 
   return (
-    <div>
+    <div className="App">
       <WeatherDisplay weather={weather} />
     </div>
   );

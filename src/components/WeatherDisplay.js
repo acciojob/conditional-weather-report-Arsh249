@@ -1,19 +1,13 @@
 import React from 'react';
 
 function WeatherDisplay({ weather }) {
-  const { temperature, conditions } = weather;
-
-  // Conditional styling based on temperature
-  const tempStyle = {
-    backgroundColor: temperature > 20 ? 'red' : 'blue',
-    color: 'red',
-  };
+  const temperatureColor = weather.temperature > 20 ? 'red' : 'blue';
 
   return (
     <div>
-      
-      <p style={tempStyle}>Temperature: {temperature}</p>
-      <p><span></span>Conditions: {conditions}</p>
+      <p style={{ color: temperatureColor }}>Temperature: {weather.temperature}</p>
+      <p>Conditions: {weather.conditions}</p>
+      <span style={{ color: temperatureColor }}>Temp Color Indicator</span> 
     </div>
   );
 }
